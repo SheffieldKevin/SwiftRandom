@@ -136,7 +136,7 @@ public extension Random {
     }
 
     func shuffled <T> (source: Array <T>) -> Array <T> {
-        if source.count == 0 {
+        if source.isEmpty == true {
             return []
         }
         return random_array(source.count, initial: source[0]) { source[$0] }
